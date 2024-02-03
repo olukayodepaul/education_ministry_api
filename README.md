@@ -34,7 +34,7 @@ pip freeze
 ```
 run the fastAPI Server.
 ```
- uvicorn apps.main:app --reload
+ uvicorn apps.server:app --reload
  ```
 
 ### file directory structure
@@ -60,5 +60,6 @@ analytic_tool\  <--This is the root directory
     >dockerfile
     >README.md
 ```
- 
+
+
 
