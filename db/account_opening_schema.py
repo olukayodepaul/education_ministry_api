@@ -1,8 +1,8 @@
 from sqlalchemy import Column, String, Integer
 
-from base import Base
+from .database import Base
 
-class User(Base):
+class AccountOpeningSchema(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)

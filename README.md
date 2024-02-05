@@ -26,7 +26,7 @@ source venv/bin/activate
 ```
 run the txt with all the available dependencies
 ```
-pip install -r config/dependencies.txt
+pip install -r config/requirements.txt
 ```
 run pip freeze to see all the dependencies or packages install
 ```
@@ -34,7 +34,7 @@ pip freeze
 ```
 run the fastAPI Server.
 ```
- uvicorn apps.server:app --reload
+ uvicorn apps.main:app --reload
  ```
 
 ### file directory structure
@@ -60,6 +60,30 @@ analytic_tool\  <--This is the root directory
     >dockerfile
     >README.md
 ```
+
+### Docker image
+convert project to image
+```
+docker build -t paulolukayode/education-ministry-api:0.0.0.development  .
+```
+
+### Run Docker image
+run the image as a container
+```
+docker run -p 8000:8000 paulolukayode/education-ministry-api:0.0.0.development
+docker run --name postgres -e POSTGRES_PASSWORD=admin123 -p 5433:5432 postgres:latest -d
+```
+
+### Run Docker compose
+docker image can also be run by docker compose using docker-compose.yaml file
+```
+docker-compose up  
+```
+
+
+
+
+
 
 
 
