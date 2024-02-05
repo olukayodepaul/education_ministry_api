@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from api import account_opening_api
-from db import database as models 
+from app.api import account_opening_api
+from app.db import database as models 
 
 models.Base.metadata.create_all(bind=models.engine)
 

@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 
-from models.user import User
-from services.account_opening_service import AccountOpeningService
+from app.models.user import User
+from app.services.account_opening_service import AccountOpeningService
 from typing import List
-from di.dependencies import open_account
+from app.di.dependencies import open_account
 
 router = APIRouter()
 

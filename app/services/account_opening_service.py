@@ -1,8 +1,8 @@
 from typing import List
 
-from models.user import User
+from app.models.user import User
 from sqlalchemy.orm import Session
-from db import account_opening_schema as AccountOpeningSchema
+from app.db import account_opening_schema 
 
 class AccountOpeningService:
     
@@ -10,5 +10,5 @@ class AccountOpeningService:
         self.db = db
     
     def open_accounts(self, id: int) -> List[User]:
-      deleted_post = self.db.query(AccountOpeningSchema.AccountOpeningSchema).all()
+      deleted_post = self.db.query(account_opening_schema.AccountOpeningSchema).all()
       return deleted_post

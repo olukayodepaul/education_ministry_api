@@ -70,8 +70,8 @@ docker build -t paulolukayode/education-ministry-api:0.0.0.development  .
 ### Run Docker image
 run the image as a container
 ```
-docker run -p 8000:8000 paulolukayode/education-ministry-api:0.0.0.development
-docker run --name postgres -e POSTGRES_PASSWORD=admin123 -p 5433:5432 postgres:latest -d
+docker run paulolukayode/education-ministry-api:0.0.0.development
+docker run --name postgres -e POSTGRES_PASSWORD=admin123 -p 5433:5432 postgres:latest 
 ```
 
 ### Run Docker compose
